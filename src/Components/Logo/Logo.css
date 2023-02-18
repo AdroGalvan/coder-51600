@@ -1,0 +1,10 @@
+.logo-nav {
+    height: 60px;
+    width: 60px;
+    margin: 20px;
+    transition: transform .7s ease-in-out;
+}
+
+.logo-nav:hover {
+    transform: rotate(360deg);
+}

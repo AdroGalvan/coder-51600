@@ -1,10 +1,10 @@
 import imagen1 from "../Images/zapa.png"
+import "./Logo.css"
 
 const Logo = () => {
   return (
     <div>
-        <img style={{height: "60px", widt
-    :"60px", marginLeft: "10px"}} src={imagen1}/>
+        <img className="logo-nav" src={imagen1}/>
     </div>
   )
 }

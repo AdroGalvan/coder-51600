@@ -1,7 +1,9 @@
-.red {
-    color: red
+.products {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    gap: 50px;
+    margin: 20px;
 }
 
-.blue {
-    color: blue;
-}
+
