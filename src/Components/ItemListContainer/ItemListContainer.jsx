@@ -1,6 +1,8 @@
-const ItemListContainer = () => {
+const ItemListContainer = ( {greeting} ) => {
   return (
-    <div>ItemListContainer</div>
+    <div>
+        <h2 style={{margin:"30px"}} > {greeting} </h2>
+    </div>
   )
 }
 

@@ -1,4 +1,4 @@
-import { CiShoppingCart } from "react-icons/ci";
+import CartWidget from "../CartWidget/CartWidget";
 import Logo from "../Logo/Logo";
 import "./Navbar.css"
 
@@ -7,11 +7,11 @@ const Navbar = () => {
     <div className="container-navbar">
         <Logo/>
         <ul className="container-list">
-            <li> Todas </li>
-            <li> Urbanas</li>
-            <li> Deportivas </li>
+            <a href=""> Todas </a>
+            <a href=""> Urbanas </a>
+            <a href=""> Deportivas </a>
         </ul>
-        <CiShoppingCart className="shopping-cart"/>
+        <CartWidget/>
     </div>
   );
 };
