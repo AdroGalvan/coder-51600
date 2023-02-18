@@ -11,6 +11,15 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 40px;
+    gap: 80px;
     list-style: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.shopping-cart{
+    color: #e2e2e2;
+    height: 45px;
+    width: 45px;
+    margin: 10px;
 }
