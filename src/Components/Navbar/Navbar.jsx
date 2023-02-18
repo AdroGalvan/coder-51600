@@ -1,4 +1,4 @@
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { CiShoppingCart } from "react-icons/ci";
 import Logo from "../Logo/Logo";
 import "./Navbar.css"
 
@@ -11,7 +11,7 @@ const Navbar = () => {
             <li> Urbanas</li>
             <li> Deportivas </li>
         </ul>
-        <AiOutlineShoppingCart/>
+        <CiShoppingCart className="shopping-cart"/>
     </div>
   );
 };
