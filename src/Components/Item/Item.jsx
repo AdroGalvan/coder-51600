@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Link } from "react-router-dom"
 
 const Item = ({ element }) => {
   return (
@@ -11,7 +12,6 @@ const Item = ({ element }) => {
       <CardMedia
         sx={{ height: 140 }}
         image={element.img}
-        title="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -22,9 +22,11 @@ const Item = ({ element }) => {
         </Typography>
       </CardContent>
       <CardActions>
+        <Link style={{textDecoration:"none"}} to={ `/itemDetail/${element.id}`}>
         <Button size="small" variant="contained" color="secondary">
-          Agregar al Carrito
+          Ver detalle
         </Button>
+        </Link>
       </CardActions>
     </Card>
   );
