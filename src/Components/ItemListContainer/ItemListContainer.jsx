@@ -1,14 +1,20 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { products } from "../../productsMocks";
 import ItemList from "../ItemList/ItemList";
 
 
 const ItemListContainer = () => {
+
+  const {categoryName} = useParams()
+
   const [items, setItems] = useState([]);
+
+  const productosFiltrados = products.filter( (elemento)=> elemento.category === categoryName)
 
   useEffect(() => {
     const productList = new Promise((resolve, reject) => {
-      resolve(products);
+      resolve(categoryName ? productosFiltrados : products);
       // reject("lo siento, no tienes autorizacion")
     });
 
@@ -19,11 +25,9 @@ const ItemListContainer = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [categoryName]);
 
   console.log(items);
-
-  
 
   return (
     <div>

@@ -14,7 +14,7 @@ let previusTitle = document.title
 
 window.addEventListener('blur', () => {
   previusTitle = document.title
-  document.title = 'NO TE VAYAS!'
+  document.title = '🛒 Compra Pendiente 🛒'
 } )
 
 window.addEventListener('focus', () => {

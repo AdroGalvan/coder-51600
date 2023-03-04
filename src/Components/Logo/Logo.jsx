@@ -4,7 +4,7 @@ import "./Logo.css"
 const Logo = () => {
   return (
     <div>
-        <img className="logo-nav" src={imagen1}/>
+        <img className="logo-nav" style={{cursor:"pointer"}} src={imagen1}/>
     </div>
   )
 }

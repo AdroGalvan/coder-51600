@@ -1,9 +1,12 @@
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import Navbar from "./Components/Navbar/Navbar";
-import ProductCard from "./Components/ProductCard/ProductCard";
 import Footer from "./Components/Footer/Footer";
-import ItemCount from "./Components/ItemCount/ItemCount";
+import ConsumiendoApis from "./Components/ConsumiendoApis/ConsumiendoApis";
+import Cart from "./Components/Cart/Cart";
+import Login from "./Components/Login/Login";
 
+import {BrowserRouter, Route, Routes} from "react-router-dom"
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
 
@@ -13,17 +16,30 @@ function App() {
   
 
   return (
-    <div>
-      <Navbar />
-      <ItemListContainer />
-      {/* <ProductCard title="Producto1" price={200} />
-      <ProductCard title="Producto2" price={500} />
-      <ProductCard title="Producto3" price={350} /> */}
-      {/* <ItemCount stock={5} initial={1} onAdd={onAdd} /> */}
-      <Footer/>
-    </div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+
+          <Route path="/" element={<ItemListContainer />} />
+
+          <Route path="/category/:name" element={<ItemListContainer />} />
+
+          <Route path="/cart" element={<Cart />} />
+
+          <Route path="/login" element={<Login />} />
+
+          <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+          
+
+          <Route path="*" element={<h1> error 404: Not found</h1> } />
+        
+        </Routes>
+        <Footer />
+      </BrowserRouter>
   );
 }
 
 export default App;
  
+
+// ``
