@@ -8,9 +8,9 @@ import { Link } from "react-router-dom"
 
 const Item = ({ element }) => {
   return (
-    <Card sx={{ width: 345, height: 300 }}>
+    <Card sx={{ width: 345, height: 340 }}>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 200 }}
         image={element.img}
       />
       <CardContent>

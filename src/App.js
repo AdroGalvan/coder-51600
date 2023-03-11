@@ -14,7 +14,6 @@ function App() {
     console.log(`se agregaron al carrito ${cantidad} elementos`)
   }
   
-
   return (
       <BrowserRouter>
         <Navbar />
