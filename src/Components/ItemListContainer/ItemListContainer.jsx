@@ -5,17 +5,17 @@ import ItemList from "../ItemList/ItemList";
 
 
 const ItemListContainer = () => {
-
-  const {categoryName} = useParams()
+  const { categoryName } = useParams();
 
   const [items, setItems] = useState([]);
 
-  const productosFiltrados = products.filter( (elemento)=> elemento.category === categoryName)
+  const productosFiltrados = products.filter(
+    (elemento) => elemento.category === categoryName
+  );
 
   useEffect(() => {
     const productList = new Promise((resolve, reject) => {
       resolve(categoryName ? productosFiltrados : products);
-      // reject("lo siento, no tienes autorizacion")
     });
 
     productList
@@ -27,13 +27,9 @@ const ItemListContainer = () => {
       });
   }, [categoryName]);
 
-  console.log(items);
-
   return (
     <div>
-      
-      <ItemList items={items}  />
-      
+      <ItemList items={items} />
     </div>
   );
 };

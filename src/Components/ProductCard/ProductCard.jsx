@@ -10,8 +10,6 @@ const ProductCard = ( {title, price, isRed} ) => {
     console.log( "hola " + nombre )
   }
 
-
-  
   return (
     <div className="products">
         <h1>{title}</h1>
